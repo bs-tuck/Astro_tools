@@ -1,4 +1,4 @@
-<form oninput="output.value = (tel.valueAsNumber || 0) * (bar.valueAsNumber || 0) / (eye.valueAsNumber || 0);second.value = (tel.valueAsNumber || 0) / (apr.valueAsNumber || 0) * (bar.valueAsNumber || 0);third.value = (tel.valueAsNumber || 0) * (bar.valueAsNumber || 0) * (reducer.valueAsNumber || 0); fourth.value = (reducer.valueAsNumber || 0)" id=foo>
+<form oninput="output.value = (tel.valueAsNumber || 0) * (bar.valueAsNumber || 0) * (reducer.valueAsNumber || 0) / (eye.valueAsNumber || 0);second.value = (tel.valueAsNumber || 0) / (apr.valueAsNumber || 0) * (bar.valueAsNumber || 0);third.value = (tel.valueAsNumber || 0) * (bar.valueAsNumber || 0) * (reducer.valueAsNumber || 0)" id=foo>
   <table Border="10" bordercolor="green" bgcolor="lime">
 	<tr>
 		<td style align="left">
@@ -7,7 +7,7 @@
               </label>
 		</td>
 		<td>
-			<input type=number name=tel value="400">
+			<input type=number name=tel value="0">
 		</td>
 	</tr>
 	<tr>
@@ -26,7 +26,7 @@
                        Telescope Aperture :
               </label>
 		</td>
-		<td><input type=number name=apr value="80">
+		<td><input type=number name=apr value="200">
 		</td>
 	</tr> 
 	<tr>
@@ -75,16 +75,6 @@
 		</td>
 		<td>
 			<output name=third for="AppFL" form=foo></output>
-		</td>
-	</tr>
-	<tr>
-		<td style align="left">
-              <label for="red">
-                       Reducer : 
-              </label>
-		</td>
-		<td>
-			<output name=fourth for="reducer" form=foo></output>
 		</td>
 	</tr>
   </table>
