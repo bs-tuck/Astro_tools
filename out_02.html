@@ -1,0 +1,91 @@
+<form oninput="output.value = (tel.valueAsNumber || 0) * (bar.valueAsNumber || 0) / (eye.valueAsNumber || 0);second.value = (tel.valueAsNumber || 0) / (apr.valueAsNumber || 0) * (bar.valueAsNumber || 0);third.value = (tel.valueAsNumber || 0) * (bar.valueAsNumber || 0) * (reducer.valueAsNumber || 0); fourth.value = (reducer.valueAsNumber || 0)" id=foo>
+  <table Border="10" bordercolor="green" bgcolor="lime">
+	<tr>
+		<td style align="left">
+              <label for="tfl">
+                       Telescope focal length :  
+              </label>
+		</td>
+		<td>
+			<input type=number name=tel value="400">
+		</td>
+	</tr>
+	<tr>
+		<td style align="left">
+              <label for="epfl">
+                       Eye piece focal length : 
+              </label>
+		</td> 
+		<td>
+			<input type=number name=eye value="25">
+		</td>
+	</tr>
+	<tr>
+		<td style align="left">
+              <label for="apr">
+                       Telescope Aperture :
+              </label>
+		</td>
+		<td><input type=number name=apr value="80">
+		</td>
+	</tr> 
+	<tr>
+		<td style align="left" >
+              <label for="bar" >
+                       Barlow :
+              </label>
+		</td>
+		<td><input  type=number name=bar value="1">
+		</td>
+	</tr>
+	<tr>
+		<td style align="left" >
+              <label for="reducer" >
+                       Reducer :
+              </label>
+		</td>
+		<td><input  type=number name=reducer min="0.2" max="1.0" step="0.1" value="1">
+		</td>
+	</tr>
+	<tr>
+		<td style align="left">
+              <label for="tel eye">
+                       Magnification : 
+              </label>
+		</td>
+		<td>
+			<output name=output for="tel eye" form=foo>0</output>
+		</td>
+	</tr>
+	<tr>
+		<td style align="left">
+              <label for="tel apr">
+                       Focal ratio : 
+              </label>
+		</td>
+		<td>
+			<output name=second for="tel apr" form=foo>0</output>
+		</td>
+	</tr>
+	<tr>
+		<td style align="left">
+              <label for="red">
+                       Apparent focal length : 
+              </label>
+		</td>
+		<td>
+			<output name=third for="AppFL" form=foo></output>
+		</td>
+	</tr>
+	<tr>
+		<td style align="left">
+              <label for="red">
+                       Reducer : 
+              </label>
+		</td>
+		<td>
+			<output name=fourth for="reducer" form=foo></output>
+		</td>
+	</tr>
+  </table>
+</form>
